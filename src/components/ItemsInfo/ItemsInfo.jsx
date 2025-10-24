@@ -27,7 +27,6 @@ export default function ItemsInfo() {
     <div className={classes.ItemsInfo}>
       <h2 className={classes.ItemsInfo__ShopName}>Shop Name</h2>
 
-      {/* Главный слайдер */}
       <Swiper
         loop={true}
         spaceBetween={10}
@@ -46,7 +45,6 @@ export default function ItemsInfo() {
         ))}
       </Swiper>
 
-      {/* Миниатюры */}
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={true}
@@ -64,7 +62,6 @@ export default function ItemsInfo() {
         ))}
       </Swiper>
 
-      {/* Детали активного продукта */}
       <div className={classes.ItemsInfo__Details}>
         <h4 className={classes.ItemsInfo__Details__Title}>Details:</h4>
 

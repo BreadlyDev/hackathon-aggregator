@@ -1,13 +1,18 @@
 import Map from "./components/Map/Map";
-import "./App.scss";
-
 import SearchPanel from "./components/SearchPanel/SearchPanel";
+import ItemsInfo from "./components/ItemsInfo/ItemsInfo";
+
+import "./App.scss";
+import { useState } from "react";
 
 function App() {
+  const [radius, setRadius] = useState(10);
+
   return (
     <>
-      <SearchPanel />
-      <Map />
+      <SearchPanel radius={radius} setRadius={setRadius} />
+      <Map radius={radius} />
+      <ItemsInfo />
     </>
   );
 }

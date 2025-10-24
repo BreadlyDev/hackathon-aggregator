@@ -17,33 +17,32 @@
 
   &__Details {
     &__Title {
-        font-size: 24px;
+      font-size: 24px;
     }
     &_Row {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
     }
 
-    &_Color, &_Size {
-        display: flex;
+    &_Color,
+    &_Size {
+      display: flex;
 
-        li {
-            margin-right: 5px;
-        }
+      li {
+        margin-right: 5px;
+      }
     }
 
     &_Size {
-        li {
-            padding: 4px;
-            border-radius: 4px;
-            background-color: #ccc;
-        }
+      li {
+        padding: 4px;
+        border-radius: 4px;
+        background-color: #ccc;
+      }
     }
   }
 }
-
-
 
 .ItemInfoSwiper {
   width: 360px;
@@ -59,9 +58,6 @@
 }
 
 .ItemInfoSwiper_thumbs {
-    
-
-
   .swiper-slide {
     width: 25%;
     opacity: 0.4;
