@@ -1,12 +1,15 @@
-import Map from "./components/Map/Map"
-import  './App.scss'
+import Map from "./components/Map/Map";
+import "./App.scss";
+
+import SearchPanel from "./components/SearchPanel/SearchPanel";
 
 function App() {
   return (
     <>
-    <Map />
+      <SearchPanel />
+      <Map />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

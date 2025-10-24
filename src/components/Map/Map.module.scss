@@ -13,11 +13,11 @@
 /* Floating controls panel */
 .mapControls {
   position: absolute;
-  bottom: 20px;   /* bottom-left corner */
+  bottom: 20px; /* bottom-left corner */
   left: 20px;
   display: flex;
-  flex-direction: row;  /* horizontal layout */
-  gap: 8px;             /* spacing between buttons */
+  flex-direction: row; /* horizontal layout */
+  gap: 8px; /* spacing between buttons */
   z-index: 1000;
 }
 

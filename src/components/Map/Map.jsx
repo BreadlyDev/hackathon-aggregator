@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 
-import GpsFixedIcon from '@mui/icons-material/GpsFixed';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import ZoomInIcon from '@mui/icons-material/ZoomIn';
-import ZoomOutIcon from '@mui/icons-material/ZoomOut';
+import GpsFixedIcon from "@mui/icons-material/GpsFixed";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import ZoomInIcon from "@mui/icons-material/ZoomIn";
+import ZoomOutIcon from "@mui/icons-material/ZoomOut";
 
 import "leaflet/dist/leaflet.css";
 import styles from "./Map.module.scss";
 
-// Recenter hook
 function Recenter({ position }) {
   const map = useMap();
   useEffect(() => {
@@ -21,7 +20,6 @@ function Recenter({ position }) {
   return null;
 }
 
-// All controls in one panel
 function MapControls({ initialPosition, setCurrentPosition, theme, setTheme }) {
   const map = useMap();
 
@@ -58,7 +56,7 @@ function MapControls({ initialPosition, setCurrentPosition, theme, setTheme }) {
           <ZoomInIcon />
         </button>
         <button className={styles.mapBtn} onClick={zoomOut} title="Zoom Out">
-          <ZoomOutIcon /> 
+          <ZoomOutIcon />
         </button>
       </div>
     </div>
@@ -66,7 +64,9 @@ function MapControls({ initialPosition, setCurrentPosition, theme, setTheme }) {
 }
 
 export default function Map() {
-  const [currentPosition, setCurrentPosition] = useState([55.751244, 37.618423]);
+  const [currentPosition, setCurrentPosition] = useState([
+    55.751244, 37.618423,
+  ]);
   const [initialPosition, setInitialPosition] = useState(null);
   const [theme, setTheme] = useState("dark");
 
@@ -87,18 +87,28 @@ export default function Map() {
   const mapThemes = {
     dark: {
       url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-      attribution: '&copy; <a href="https://carto.com/">CARTO</a> | © OpenStreetMap',
+      attribution:
+        '&copy; <a href="https://carto.com/">CARTO</a> | © OpenStreetMap',
     },
     light: {
       url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-      attribution: '&copy; <a href="https://carto.com/">CARTO</a> | © OpenStreetMap',
+      attribution:
+        '&copy; <a href="https://carto.com/">CARTO</a> | © OpenStreetMap',
     },
   };
 
   return (
     <div className={styles.mapContainer}>
-      <MapContainer center={currentPosition} zoom={13} scrollWheelZoom className={styles.map}>
-        <TileLayer attribution={mapThemes[theme].attribution} url={mapThemes[theme].url} />
+      <MapContainer
+        center={currentPosition}
+        zoom={13}
+        scrollWheelZoom
+        className={styles.map}
+      >
+        <TileLayer
+          attribution={mapThemes[theme].attribution}
+          url={mapThemes[theme].url}
+        />
         <Recenter position={currentPosition} />
         <MapControls
           initialPosition={initialPosition}

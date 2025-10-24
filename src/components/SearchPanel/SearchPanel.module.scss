@@ -1,0 +1,60 @@
+:root {
+  --color-light-gray: rgb(218, 218, 218);
+
+  --border-radius-small: 5px;
+  --border-radius-medium: 10px;
+
+  --font-size-medium: 18px;
+}
+
+.container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: auto;
+  border-radius: 10px;
+  padding: 20px;
+  row-gap: 15px;
+}
+
+.label {
+  font-size: var(--font-size-medium);
+}
+
+.section {
+  display: flex;
+  column-gap: 20px;
+}
+
+.input {
+  padding: 10px 20px;
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-small);
+  width: 100%;
+}
+
+.columnSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.range {
+  cursor: pointer;
+}
+
+.searchButton {
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius-small);
+  height: inherit;
+  aspect-ratio: 1;
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
