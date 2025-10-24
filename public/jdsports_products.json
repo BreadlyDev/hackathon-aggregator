@@ -1,0 +1,709 @@
+[
+  {
+    "title": "The North Face Graphic Oversized T-Shirt",
+    "price": "40,00€",
+    "img_url": "https://i8.amplience.net/t/jpl/jdde_product_list?plu=jd_756358_al&qlt=85&exclusive=1&qlt=92&wid=363&hei=363&v=1&fmt=auto",
+    "ref_item": "https://www.jdsports.de/product/weiss-the-north-face-graphic-oversized-t-shirt/19706949_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "The North Face Centre Logo T-Shirt",
+    "price": "25,00€",
+    "img_url": "https://i8.amplience.net/t/jpl/jdde_product_list?plu=jd_772162_al&qlt=85&offer_81=1&qlt=92&w=363&h=363&v=1&fmt=auto",
+    "ref_item": "https://www.jdsports.de/product/weiss-the-north-face-centre-logo-t-shirt/19708607_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Under Armour Tech Fade T-Shirt",
+    "price": "35,00€",
+    "img_url": "https://i8.amplience.net/t/jpl/jdde_product_list?plu=jd_761660_al&qlt=85&exclusive=1&qlt=92&wid=363&hei=363&v=1&fmt=auto",
+    "ref_item": "https://www.jdsports.de/product/weiss-under-armour-tech-fade-t-shirt/19708737_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ]
+  },
+  {
+    "title": "adidas Training Essential T-Shirt",
+    "price": "20,00€",
+    "img_url": "https://i8.amplience.net/t/jpl/jdde_product_list?plu=jd_763226_al&qlt=85&qlt=92&w=363&h=363&v=1&fmt=auto",
+    "ref_item": "https://www.jdsports.de/product/navy-adidas-training-essential-t-shirt/19714022_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Navy",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "adidas Originals Cali T-Shirt",
+    "price": "33,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/navy-adidas-originals-cali-t-shirt/19709133_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Navy",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Under Armour ColdGear T-Shirt",
+    "price": "30,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/rosa-under-armour-coldgear-t-shirt/19714025_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Rosa",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ]
+  },
+  {
+    "title": "Jordan Swoosh T-Shirt",
+    "price": "30,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-jordan-swoosh-t-shirt/19708884_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Nike Academy T-Shirt",
+    "price": "25,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-nike-academy-t-shirt/19709114_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "adidas Originals Gothic T-Shirt",
+    "price": "38,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-adidas-originals-gothic-t-shirt/19718767_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Jordan Varsity T-Shirt",
+    "price": "40,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-jordan-varsity-t-shirt/19711431_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": []
+  },
+  {
+    "title": "Columbia Sunset T-Shirt",
+    "price": "29,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/grau-columbia-sunset-t-shirt/19704556_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Grau",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "The North Face Globe Relaxed T-Shirt",
+    "price": "35,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/grau-the-north-face-globe-relaxed-t-shirt/19720410_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Grau",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Nike x NOCTA T-Shirt",
+    "price": "45,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-nike-x-nocta-t-shirt/19696571_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Jordan Swoosh T-Shirt",
+    "price": "30,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/weiss-jordan-swoosh-t-shirt/19708736_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Columbia Points T-Shirt",
+    "price": "29,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-columbia-points-t-shirt/19704512_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Nike Street T-Shirt",
+    "price": "30,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-nike-street-t-shirt/19705385_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "adidas Originals Terrace T-Shirt",
+    "price": "35,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/weiss-adidas-originals-terrace-t-shirt/19709162_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Lacoste Croc Pique T-Shirt",
+    "price": "75,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-lacoste-croc-pique-t-shirt/19700397_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "3/S",
+      "4/M",
+      "5/L",
+      "6/XL",
+      "7/XXL"
+    ]
+  },
+  {
+    "title": "Nike Core T-Shirt",
+    "price": "25,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/grau-nike-core-t-shirt/19694968_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Grau",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Under Armour Camo HeatGear T-Shirt",
+    "price": "40,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-under-armour-camo-heatgear-t-shirt/19711418_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "McKenzie Essential T-Shirt",
+    "price": "10,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/weiss-mckenzie-essential-t-shirt/19681373_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Columbia Saz T-Shirt",
+    "price": "29,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/weiss-columbia-saz-t-shirt/19705154_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Nike Core T-Shirt",
+    "price": "25,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-nike-core-t-shirt/19650643_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "The North Face 24/7 1/4 Zip Grid Top",
+    "price": "55,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-the-north-face-247-14-zip-grid-top/19713292_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "title": "Nike Street T-Shirt",
+    "price": "30,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/weiss-nike-street-t-shirt/19705386_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "adidas Archive Cutline T-Shirt",
+    "price": "45,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-adidas-archive-cutline-t-shirt/19692225_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Under Armour Short-Sleeves UA M SPORTSTYLE LC SS",
+    "price": "28,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/schwarz-under-armour-short-sleeves-ua-m-sportstyle-lc-ss/19721664_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Schwarz",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ]
+  },
+  {
+    "title": "Under Armour Tech Pixelated T-Shirt",
+    "price": "33,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/wonder-beige-under-armour-tech-pixelated-t-shirt/19722290_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Wonder",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Under Armour Tech Hybrid T-Shirt",
+    "price": "40,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/blau-under-armour-tech-hybrid-t-shirt/19705945_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Blau",
+    "size": [
+      "XS",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "adidas Real Madrid Terrace Icons Shirt",
+    "price": "50,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/wei-adidas-real-madrid-terrace-icons-shirt/19695389_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Wei",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ]
+  },
+  {
+    "title": "The North Face Fine Box Logo T-Shirt",
+    "price": "32,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/navy-the-north-face-fine-box-logo-t-shirt/19712399_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Navy",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Under Armour Tech Utility T-Shirt",
+    "price": "45,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/navy-under-armour-tech-utility-t-shirt/19703708_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Navy",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ]
+  },
+  {
+    "title": "Lacoste Croc Pique T-Shirt",
+    "price": "75,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/weiss-lacoste-croc-pique-t-shirt/19699908_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "3/S",
+      "4/M",
+      "5/L",
+      "6/XL",
+      "7/XXL",
+      "8/XXXL"
+    ]
+  },
+  {
+    "title": "New Balance Back Logo T-Shirt",
+    "price": "35,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/weiss-new-balance-back-logo-t-shirt/19716400_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "Columbia Global T-Shirt",
+    "price": "29,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/weiss-columbia-global-t-shirt/19704558_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Weiss",
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "McKenzie Essential T-Shirt",
+    "price": "10,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/grau-mckenzie-essential-t-shirt/19709713_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Grau",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "The North Face Sobretta T-Shirt",
+    "price": "35,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/cremefarben-the-north-face-sobretta-t-shirt/19716829_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Cremefarben",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ]
+  },
+  {
+    "title": "Under Armour Tech Emboss T-Shirt",
+    "price": "40,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/burgundy-under-armour-tech-emboss-t-shirt/19716553_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Burgundy",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ]
+  },
+  {
+    "title": "Reebok Cray T-Shirt",
+    "price": "20,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/grau-reebok-cray-t-shirt/19708614_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Grau",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  },
+  {
+    "title": "adidas Training Essential T-Shirt",
+    "price": "20,00€",
+    "img_url": "/skins/default/public/img/icons/svg/loading.svg",
+    "ref_item": "https://www.jdsports.de/product/grn-adidas-training-essential-t-shirt/19710533_jdsportsde/",
+    "category": "T-Shirts und Tanktops",
+    "sex": 1,
+    "shop_id": 10,
+    "color": "Grn",
+    "size": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ]
+  }
+]
