@@ -1,16 +1,85 @@
-# React + Vite
+# Projekt "Agregator"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Beschreibung
 
-Currently, two official plugins are available:
+Dies ist eine Webanwendung, die als Aggregator dient. Sie ermöglicht Benutzern, mithilfe eines Suchfelds Kriterien (wie Preis, Geschlecht und Radius) zu definieren. Die gefilterten Ergebnisse werden auf einer interaktiven Karte angezeigt. Die Anwendung ist als Single-Page-Application (SPA) konzipiert und nutzt eine moderne Frontend-Architektur.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Kernfunktionen
 
-## React Compiler
+-   **Interaktive Suche:** Benutzer können Suchanfragen über ein spezielles Panel eingeben.
+-   **Filterung:** Ergebnisse können nach verschiedenen Kriterien wie Preis, Geschlecht oder Standortradius gefiltert werden.
+-   **Kartenvisualisierung:** Gefilterte Datenpunkte werden direkt auf einer interaktiven Karte angezeigt.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Verwendete Technologien
 
-## Expanding the ESLint configuration
+-   **Framework: [React](https://reactjs.org/)**
+    -   Dient als Hauptbibliothek zur Erstellung der Benutzeroberfläche mit einer komponentenbasierten Architektur.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **Build-Tool: [Vite](https://vitejs.dev/)**
+    -   Dient als modernes Build-Tool und Entwicklungsserver, der schnelles Hot-Reloading ermöglicht.
+
+-   **Styling: [Sass (SCSS)](https://sass-lang.com/) & [Material-UI (MUI)](https://mui.com/)**
+    -   Sass wird für erweitertes und strukturiertes CSS-Styling verwendet. MUI stellt eine Bibliothek von vorgefertigten UI-Komponenten zur Verfügung, um ein konsistentes Design zu gewährleisten.
+
+-   **Karten: [React Leaflet](https://react-leaflet.js.org/) & [OpenStreetMap](https://www.openstreetmap.org/)**
+    -   React Leaflet wird zur Integration interaktiver Karten verwendet. Die visuellen Kartendaten (Kacheln) werden vom kostenlosen Dienst OpenStreetMap bereitgestellt.
+
+-   **HTTP-Client: [Axios](https://axios-http.com/)**
+    -   Behandelt asynchrone HTTP-Anfragen zum Abrufen von Daten von externen APIs.
+
+-   **State-Management: [Redux](https://redux.js.org/)**
+    -   Dient zur Verwaltung des globalen Anwendungszustands, wie z. B. Suchfilter oder abgerufene Daten.
+
+-   **Routing: [React Router](https://reactrouter.com/)**
+    -   Verwaltet das clientseitige Routing und die Navigation zwischen verschiedenen Ansichten der Anwendung.
+
+-   **Code-Qualität: [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)**
+    -   Stellen die Codequalität und einen einheitlichen Programmierstil im gesamten Projekt sicher.
+
+## Projektstruktur
+
+```
+/home/sosal/projects/hack/hackathon-aggregator/
+├─── public/              # Statische Dateien (index.html, Bilder)
+├─── src/
+│    ├─── api/           # Module für die API-Kommunikation
+│    ├─── components/    # Wiederverwendbare React-Komponenten
+│    ├─── App.jsx        # Hauptkomponente der Anwendung
+│    └─── main.jsx       # Einstiegspunkt der Anwendung
+├─── package.json         # Projekt-Metadaten und Abhängigkeiten
+└─── vite.config.js       # Konfiguration für Vite
+```
+
+## Einrichtung und Start
+
+### 1. Klonen des Repositorys
+
+```bash
+git clone https://github.com/2pizzzza/hackathon-aggregator.git
+cd hackathon-aggregator
+```
+
+### 2. Installation der Abhängigkeiten
+
+Führen Sie den folgenden Befehl aus, um alle erforderlichen Pakete zu installieren:
+
+```bash
+npm install
+```
+
+### 3. Starten des Projekts
+
+Verwenden Sie den folgenden Befehl, um die Anwendung im Entwicklungsmodus zu starten:
+
+```bash
+npm run dev
+```
+
+Nach Ausführung des Befehls ist das Projekt unter der im Terminal angegebenen Adresse verfügbar (normalerweise `http://localhost:5173/`).
+
+## Verfügbare Skripte
+
+-   `npm run dev`: Startet den Entwicklungsserver mit Hot-Reload für eine effiziente Entwicklung.
+-   `npm run build`: Erstellt eine optimierte Version des Projekts für die Produktion im `dist`-Verzeichnis.
+-   `npm run lint`: Führt die Code-Überprüfung mit ESLint aus, um Stil- und Syntaxfehler zu finden.
+-   `npm run preview`: Startet einen lokalen Server, um den finalen Produktions-Build zu testen.
