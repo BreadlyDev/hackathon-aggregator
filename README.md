@@ -1,54 +1,54 @@
-# Проект "Agregator"
+# Projekt "Agregator"
 
-Это веб-приложение, представляющее собой агрегатор с интерактивной картой и функциями поиска. Судя по структуре компонентов, приложение позволяет искать, фильтровать и отображать информацию об объектах на карте.
+Dies ist eine Webanwendung, die als Aggregator mit einer interaktiven Karte und Suchfunktionen dient. Basierend auf der Komponentenstruktur ermöglicht die Anwendung das Suchen, Filtern und Anzeigen von Informationen zu Objekten auf einer Karte.
 
-## 🚀 Используемые технологии
+## Verwendete Technologien
 
--   **Фреймворк:** [React](https://reactjs.org/)
--   **Сборщик проекта:** [Vite](https://vitejs.dev/)
--   **Стилизация:**
+-   **Framework:** [React](https://reactjs.org/)
+-   **Build-Tool:** [Vite](https://vitejs.dev/)
+-   **Styling:**
     -   [Sass (SCSS)](https://sass-lang.com/)
-    -   [Material-UI (MUI)](https://mui.com/) для компонентов интерфейса
--   **Карты:** [React Leaflet](https://react-leaflet.js.org/)
--   **HTTP-клиент:** [Axios](https://axios-http.com/) для выполнения запросов к API
--   **Анимации:** [Framer Motion](https://www.framer.com/motion/)
--   **Роутинг:** [React Router](https://reactrouter.com/)
--   **Управление состоянием:** [Redux](https://redux.js.org/)
--   **Линтинг:** [ESLint](https://eslint.org/)
--   **Форматирование кода:** [Prettier](https://prettier.io/)
+    -   [Material-UI (MUI)](https://mui.com/)
+-   **Karten:** [React Leaflet](https://react-leaflet.js.org/)
+-   **HTTP-Client:** [Axios](https://axios-http.com/)
+-   **Animationen:** [Framer Motion](https://www.framer.com/motion/)
+-   **Routing:** [React Router](https://reactrouter.com/)
+-   **State-Management:** [Redux](https://redux.js.org/)
+-   **Linting:** [ESLint](https://eslint.org/)
+-   **Code-Formatierung:** [Prettier](https://prettier.io/)
 
-## ⚙️ Установка и запуск
+## Einrichtung und Start
 
-### 1. Клонирование репозитория (если необходимо)
+### 1. Klonen des Repositorys
 
 ```bash
-git clone <URL репозитория>
+git clone https://github.com/2pizzzza/hackathon-aggregator.git
 cd hackathon-aggregator
 ```
 
-### 2. Установка зависимостей
+### 2. Installation der Abhängigkeiten
 
-Для установки всех необходимых пакетов выполните команду:
+Führen Sie den folgenden Befehl aus, um alle erforderlichen Pakete zu installieren:
 
 ```bash
 npm install
 ```
 
-### 3. Запуск проекта
+### 3. Starten des Projekts
 
-Для запуска приложения в режиме разработки используйте:
+Verwenden Sie den folgenden Befehl, um die Anwendung im Entwicklungsmodus zu starten:
 
 ```bash
 npm run dev
 ```
 
-После выполнения команды проект будет доступен по адресу, указанному в терминале (обычно это [http://localhost:5173/](http://localhost:5173/)).
+Nach Ausführung des Befehls ist das Projekt unter der im Terminal angegebenen Adresse verfügbar (normalerweise `http://localhost:5173/`).
 
-## 📜 Доступные скрипты
+## Verfügbare Skripte
 
-В `package.json` определены следующие скрипты:
+In der `package.json` sind die folgenden Skripte definiert:
 
--   `npm run dev`: Запускает сервер для разработки с горячей перезагрузкой.
--   `npm run build`: Собирает проект для продакшена в папку `dist`.
--   `npm run lint`: Запускает проверку кода с помощью ESLint.
--   `npm run preview`: Запускает локальный сервер для просмотра продакшн-сборки.
+-   `npm run dev`: Startet den Entwicklungsserver mit Hot-Reload.
+-   `npm run build`: Erstellt das Projekt für die Produktion im `dist`-Verzeichnis.
+-   `npm run lint`: Führt die Code-Überprüfung mit ESLint aus.
+-   `npm run preview`: Startet einen lokalen Server, um den Produktions-Build anzuzeigen.
