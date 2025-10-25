@@ -35,6 +35,18 @@ export default function Map({
   const [initialPosition, setInitialPosition] = useState(null);
   const [theme, setTheme] = useState("light");
 
+  const allMedians = shopsWithBranches.map((shop) => shop.medianPrice);
+  const globalMin = Math.min(...allMedians);
+  const globalMax = Math.max(...allMedians);
+  const range = globalMax - globalMin;
+
+  function getPriceCategory(median) {
+    const ratio = (median - globalMin) / range;
+    if (ratio < 0.33) return "cheap";
+    if (ratio < 0.66) return "medium";
+    return "expensive";
+  }
+
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -115,37 +127,43 @@ export default function Map({
         )}
 
         {shopsWithBranches.flatMap((shop) =>
-          shop.branches.map((branch, idx) => (
-            <Marker
-              key={`${shop.id}-${idx}`}
-              position={[branch.latitude, branch.longitude]}
-              icon={expensiveLocationIcon}
-              eventHandlers={{
-                click: async () => {
-                  console.log(shop.id);
+          shop.branches.map((branch, idx) => {
+            const category = getPriceCategory(shop.medianPrice);
 
-                  const data = await getShopItemsRequest(
-                    shop.id,
-                    searchFilter,
-                    radius,
-                    currentPosition
-                  );
+            let icon;
+            if (category === "cheap") icon = cheapLocationIcon;
+            else if (category === "medium") icon = mediumLocationIcon;
+            else icon = expensiveLocationIcon;
 
-                  setShopWithItems(data);
-                },
-              }}
-            >
-              <Popup>
-                <b>{shop.title}</b>
-                <br />
-                {branch.address}
-                <br />
-                💰 {shop.minPrice}€ – {shop.maxPrice}€
-                <br />
-                <small>Median: {shop.medianPrice}€</small>
-              </Popup>
-            </Marker>
-          ))
+            return (
+              <Marker
+                key={`${shop.id}-${idx}`}
+                position={[branch.latitude, branch.longitude]}
+                icon={icon}
+                eventHandlers={{
+                  click: async () => {
+                    const data = await getShopItemsRequest(
+                      shop.id,
+                      searchFilter,
+                      radius,
+                      currentPosition
+                    );
+                    setShopWithItems(data);
+                  },
+                }}
+              >
+                <Popup>
+                  <b>{shop.title}</b>
+                  <br />
+                  {branch.address}
+                  <br />
+                  💰 {shop.minPrice}€ – {shop.maxPrice}€
+                  <br />
+                  <small>Median: {shop.medianPrice}€</small>
+                </Popup>
+              </Marker>
+            );
+          })
         )}
       </MapContainer>
     </div>
