@@ -1,21 +1,54 @@
 # Projekt "Agregator"
 
-Dies ist eine Webanwendung, die als Aggregator mit einer interaktiven Karte und Suchfunktionen dient. Basierend auf der Komponentenstruktur ermöglicht die Anwendung das Suchen, Filtern und Anzeigen von Informationen zu Objekten auf einer Karte.
+## Beschreibung
+
+Dies ist eine Webanwendung, die als Aggregator dient. Sie ermöglicht Benutzern, mithilfe eines Suchfelds Kriterien (wie Preis, Geschlecht und Radius) zu definieren. Die gefilterten Ergebnisse werden auf einer interaktiven Karte angezeigt. Die Anwendung ist als Single-Page-Application (SPA) konzipiert und nutzt eine moderne Frontend-Architektur.
+
+## Kernfunktionen
+
+-   **Interaktive Suche:** Benutzer können Suchanfragen über ein spezielles Panel eingeben.
+-   **Filterung:** Ergebnisse können nach verschiedenen Kriterien wie Preis, Geschlecht oder Standortradius gefiltert werden.
+-   **Kartenvisualisierung:** Gefilterte Datenpunkte werden direkt auf einer interaktiven Karte angezeigt.
 
 ## Verwendete Technologien
 
--   **Framework:** [React](https://reactjs.org/)
--   **Build-Tool:** [Vite](https://vitejs.dev/)
--   **Styling:**
-    -   [Sass (SCSS)](https://sass-lang.com/)
-    -   [Material-UI (MUI)](https://mui.com/)
--   **Karten:** [React Leaflet](https://react-leaflet.js.org/)
--   **HTTP-Client:** [Axios](https://axios-http.com/)
--   **Animationen:** [Framer Motion](https://www.framer.com/motion/)
--   **Routing:** [React Router](https://reactrouter.com/)
--   **State-Management:** [Redux](https://redux.js.org/)
--   **Linting:** [ESLint](https://eslint.org/)
--   **Code-Formatierung:** [Prettier](https://prettier.io/)
+-   **Framework: [React](https://reactjs.org/)**
+    -   Dient als Hauptbibliothek zur Erstellung der Benutzeroberfläche mit einer komponentenbasierten Architektur.
+
+-   **Build-Tool: [Vite](https://vitejs.dev/)**
+    -   Dient als modernes Build-Tool und Entwicklungsserver, der schnelles Hot-Reloading ermöglicht.
+
+-   **Styling: [Sass (SCSS)](https://sass-lang.com/) & [Material-UI (MUI)](https://mui.com/)**
+    -   Sass wird für erweitertes und strukturiertes CSS-Styling verwendet. MUI stellt eine Bibliothek von vorgefertigten UI-Komponenten zur Verfügung, um ein konsistentes Design zu gewährleisten.
+
+-   **Karten: [React Leaflet](https://react-leaflet.js.org/) & [OpenStreetMap](https://www.openstreetmap.org/)**
+    -   React Leaflet wird zur Integration interaktiver Karten verwendet. Die visuellen Kartendaten (Kacheln) werden vom kostenlosen Dienst OpenStreetMap bereitgestellt.
+
+-   **HTTP-Client: [Axios](https://axios-http.com/)**
+    -   Behandelt asynchrone HTTP-Anfragen zum Abrufen von Daten von externen APIs.
+
+-   **State-Management: [Redux](https://redux.js.org/)**
+    -   Dient zur Verwaltung des globalen Anwendungszustands, wie z. B. Suchfilter oder abgerufene Daten.
+
+-   **Routing: [React Router](https://reactrouter.com/)**
+    -   Verwaltet das clientseitige Routing und die Navigation zwischen verschiedenen Ansichten der Anwendung.
+
+-   **Code-Qualität: [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)**
+    -   Stellen die Codequalität und einen einheitlichen Programmierstil im gesamten Projekt sicher.
+
+## Projektstruktur
+
+```
+/home/sosal/projects/hack/hackathon-aggregator/
+├─── public/              # Statische Dateien (index.html, Bilder)
+├─── src/
+│    ├─── api/           # Module für die API-Kommunikation
+│    ├─── components/    # Wiederverwendbare React-Komponenten
+│    ├─── App.jsx        # Hauptkomponente der Anwendung
+│    └─── main.jsx       # Einstiegspunkt der Anwendung
+├─── package.json         # Projekt-Metadaten und Abhängigkeiten
+└─── vite.config.js       # Konfiguration für Vite
+```
 
 ## Einrichtung und Start
 
@@ -46,9 +79,7 @@ Nach Ausführung des Befehls ist das Projekt unter der im Terminal angegebenen A
 
 ## Verfügbare Skripte
 
-In der `package.json` sind die folgenden Skripte definiert:
-
--   `npm run dev`: Startet den Entwicklungsserver mit Hot-Reload.
--   `npm run build`: Erstellt das Projekt für die Produktion im `dist`-Verzeichnis.
--   `npm run lint`: Führt die Code-Überprüfung mit ESLint aus.
--   `npm run preview`: Startet einen lokalen Server, um den Produktions-Build anzuzeigen.
+-   `npm run dev`: Startet den Entwicklungsserver mit Hot-Reload für eine effiziente Entwicklung.
+-   `npm run build`: Erstellt eine optimierte Version des Projekts für die Produktion im `dist`-Verzeichnis.
+-   `npm run lint`: Führt die Code-Überprüfung mit ESLint aus, um Stil- und Syntaxfehler zu finden.
+-   `npm run preview`: Startet einen lokalen Server, um den finalen Produktions-Build zu testen.
