@@ -1,16 +1,54 @@
-# React + Vite
+# Проект "Agregator"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это веб-приложение, представляющее собой агрегатор с интерактивной картой и функциями поиска. Судя по структуре компонентов, приложение позволяет искать, фильтровать и отображать информацию об объектах на карте.
 
-Currently, two official plugins are available:
+## 🚀 Используемые технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Фреймворк:** [React](https://reactjs.org/)
+-   **Сборщик проекта:** [Vite](https://vitejs.dev/)
+-   **Стилизация:**
+    -   [Sass (SCSS)](https://sass-lang.com/)
+    -   [Material-UI (MUI)](https://mui.com/) для компонентов интерфейса
+-   **Карты:** [React Leaflet](https://react-leaflet.js.org/)
+-   **HTTP-клиент:** [Axios](https://axios-http.com/) для выполнения запросов к API
+-   **Анимации:** [Framer Motion](https://www.framer.com/motion/)
+-   **Роутинг:** [React Router](https://reactrouter.com/)
+-   **Управление состоянием:** [Redux](https://redux.js.org/)
+-   **Линтинг:** [ESLint](https://eslint.org/)
+-   **Форматирование кода:** [Prettier](https://prettier.io/)
 
-## React Compiler
+## ⚙️ Установка и запуск
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Клонирование репозитория (если необходимо)
 
-## Expanding the ESLint configuration
+```bash
+git clone <URL репозитория>
+cd hackathon-aggregator
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Установка зависимостей
+
+Для установки всех необходимых пакетов выполните команду:
+
+```bash
+npm install
+```
+
+### 3. Запуск проекта
+
+Для запуска приложения в режиме разработки используйте:
+
+```bash
+npm run dev
+```
+
+После выполнения команды проект будет доступен по адресу, указанному в терминале (обычно это [http://localhost:5173/](http://localhost:5173/)).
+
+## 📜 Доступные скрипты
+
+В `package.json` определены следующие скрипты:
+
+-   `npm run dev`: Запускает сервер для разработки с горячей перезагрузкой.
+-   `npm run build`: Собирает проект для продакшена в папку `dist`.
+-   `npm run lint`: Запускает проверку кода с помощью ESLint.
+-   `npm run preview`: Запускает локальный сервер для просмотра продакшн-сборки.
