@@ -16,4 +16,4 @@ const getGoods = async (params = {}) => {
   }
 };
 
-export default getGoods
+export { getGoods };

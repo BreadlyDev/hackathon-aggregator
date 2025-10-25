@@ -124,10 +124,15 @@ export default function Map({ radius, currentPosition, setCurrentPosition }) {
 
   // Загружаем данные магазинов
   useEffect(() => {
-    fetch("/shops_data.json")
-      .then((res) => res.json())
-      .then((data) => setShopsData(data))
-      .catch((err) => console.error("Error loading shops:", err));
+    try {
+      const storedShops = localStorage.getItem("shopsWithBranches");
+      if (storedShops) {
+        const parsed = JSON.parse(storedShops);
+        setShopsData(parsed);
+      }
+    } catch (err) {
+      console.error("Error parsing shops from localStorage:", err);
+    }
   }, []);
 
   // Геолокация пользователя
