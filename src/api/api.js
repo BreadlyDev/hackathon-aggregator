@@ -102,16 +102,13 @@ const getGoodsRequest = async (
     const shopsWithBranches = data.map((shop) => ({
       id: shop.id,
       title: shop.title,
+      minPrice: shop.minPrice,
+      maxPrice: shop.maxPrice,
+      medianPrice: shop.medianPrice,
       branches: shop.branches,
     }));
 
-    const shops = data.map((shop) => ({
-      id: shop.id,
-      title: shop.title,
-      branches: shop.branches,
-    }));
-
-    setShopsWithBranches(shops);
+    setShopsWithBranches(shopsWithBranches);
 
     console.log("Shops with branches saved:", shopsWithBranches);
   } catch (err) {

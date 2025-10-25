@@ -154,7 +154,7 @@ export default function Map({
 
       if (allBranches.length > 0) {
         const center = L.latLngBounds(allBranches).getCenter();
-        map.setView(center); // меняем только центр, зум остаётся прежним
+        map.setView(center);
       }
     }, [shopsWithBranches, map]);
 
