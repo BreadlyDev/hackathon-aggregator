@@ -132,6 +132,7 @@ const getShopItemsRequest = async (
     );
 
     console.log("Response from getShopItems:", data);
+    return data;
   } catch (err) {
     console.error(err);
   }

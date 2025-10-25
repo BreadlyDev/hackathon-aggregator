@@ -9,6 +9,8 @@ function App() {
   const [radius, setRadius] = useState(10);
   const [currentPosition, setCurrentPosition] = useState([50.718, 12.4885]);
   const [shopsWithBranches, setShopsWithBranches] = useState([]);
+  const [shopWithItems, setShopWithItems] = useState(null);
+
   const [searchFilter, setSearchFilter] = useState({
     title: "",
     minPrice: "",
@@ -35,8 +37,9 @@ function App() {
         setCurrentPosition={setCurrentPosition}
         shopsWithBranches={shopsWithBranches}
         searchFilter={searchFilter}
+        setShopWithItems={setShopWithItems}
       />
-      <ItemsInfo />
+      {shopWithItems ? <ItemsInfo /> : null}
     </>
   );
 }

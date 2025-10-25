@@ -124,6 +124,7 @@ export default function Map({
   setCurrentPosition,
   shopsWithBranches,
   searchFilter,
+  setShopWithItems,
 }) {
   const [initialPosition, setInitialPosition] = useState(null);
   const [theme, setTheme] = useState("light");
@@ -230,12 +231,14 @@ export default function Map({
                 click: async () => {
                   console.log(shop.id);
 
-                  await getShopItemsRequest(
+                  const data = await getShopItemsRequest(
                     shop.id,
                     searchFilter,
                     radius,
                     currentPosition
                   );
+
+                  setShopWithItems(data);
                 },
               }}
             >
