@@ -50,6 +50,7 @@ const mapGetGoodsRequestParams = (searchFilter, radius, userPosition) => {
     sex: searchFilter.gender ? GENDERS[searchFilter.gender] : undefined,
     userLat: userPosition[0],
     userLon: userPosition[1],
+    shop: searchFilter.shop,
     radius: radius ?? undefined,
   };
 };

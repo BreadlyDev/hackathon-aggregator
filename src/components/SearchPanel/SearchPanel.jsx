@@ -17,12 +17,12 @@ export default function SearchPanel({
   radius,
   setRadius,
   userPosition,
-  searchFilter, 
-  setSearchFilter, 
+  searchFilter,
+  setSearchFilter,
   setShopsWithBranches,
 }) {
   const [isOpen, setIsOpen] = useState(true);
-  
+
   const handleKeyDown = async (e) => {
     if (e.key === "Enter") {
       const shopsWithBranches = await getGoodsRequest(

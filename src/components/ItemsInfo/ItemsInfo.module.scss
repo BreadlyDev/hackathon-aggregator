@@ -1,4 +1,4 @@
-.ItemsInfo {
+.itemsInfo {
   position: absolute;
   z-index: 10;
   top: 20px;
@@ -9,24 +9,24 @@
   background-color: #fff;
   box-shadow: 0px 5px 20px 0px rgba(105, 103, 103, 0.95);
 
-  &__ShopName {
+  &shopName {
     font-weight: 900;
     font-size: 32px;
     margin-bottom: 10px;
   }
 
-  &__Details {
-    &__Title {
+  &details {
+    &title {
       font-size: 24px;
     }
-    &_Row {
+    &row {
       display: flex;
       justify-content: space-between;
       margin-top: 15px;
     }
 
-    &_Color,
-    &_Size {
+    &color,
+    &size {
       display: flex;
 
       li {
@@ -34,7 +34,7 @@
       }
     }
 
-    &_Size {
+    &size {
       li {
         padding: 4px;
         border-radius: 4px;
@@ -44,7 +44,7 @@
   }
 }
 
-.ItemInfoSwiper {
+.itemInfoSwiper {
   width: 360px;
   height: 360px;
   margin-bottom: 20px;
@@ -57,7 +57,7 @@
   }
 }
 
-.ItemInfoSwiper_thumbs {
+.itemInfoSwiperThumbs {
   .swiper-slide {
     width: 25%;
     opacity: 0.4;

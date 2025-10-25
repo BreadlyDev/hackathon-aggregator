@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import classes from "./ItemsInfo.module.scss";
+import styles from "./ItemsInfo.module.scss";
 import { getShopItemsRequest } from "../../api/api";
 
 export default function ItemsInfo({
@@ -21,32 +21,35 @@ export default function ItemsInfo({
 
   useEffect(() => {
     const nearEnd = activeIndex >= products.length - 2;
-    if (nearEnd) {
-      const loadMore = async () => {
-        const nextPage = page + 1;
-        try {
-          const data = await getShopItemsRequest(
-            shopWithItems.shopId,
-            searchFilter,
-            radius,
-            userPosition,
-            nextPage
-          );
 
-          if (data.items && data.items.length > 0) {
-            setShopWithItems((prev) => ({
-              ...prev,
-              items: [...prev.items, ...data.items],
-            }));
-            setPage(nextPage);
-          }
-        } catch (e) {
-          console.error("Ошибка при подгрузке:", e);
-        }
-      };
-
-      loadMore();
+    if (!nearEnd) {
+      return;
     }
+
+    const loadMore = async () => {
+      const nextPage = page + 1;
+      try {
+        const data = await getShopItemsRequest(
+          shopWithItems.shopId,
+          searchFilter,
+          radius,
+          userPosition,
+          nextPage
+        );
+
+        if (data.items && data.items.length > 0) {
+          setShopWithItems((prev) => ({
+            ...prev,
+            items: [...prev.items, ...data.items],
+          }));
+          setPage(nextPage);
+        }
+      } catch (e) {
+        console.error("Ошибка при подгрузке:", e);
+      }
+    };
+
+    loadMore();
   }, [activeIndex]);
 
   const products = shopWithItems.items;
@@ -57,8 +60,8 @@ export default function ItemsInfo({
   const activeProduct = products[activeIndex];
 
   return (
-    <div className={classes.ItemsInfo}>
-      <h2 className={classes.ItemsInfo__ShopName}>{shopWithItems.shopTitle}</h2>
+    <div className={styles.itemsInfo}>
+      <h2 className={styles.itemsInfoShopName}>{shopWithItems.shopTitle}</h2>
 
       <Swiper
         loop={true}
@@ -66,7 +69,7 @@ export default function ItemsInfo({
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className={classes.ItemInfoSwiper}
+        className={styles.ItemInfoSwiper}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
         {products.map((item, index) => (
@@ -86,7 +89,7 @@ export default function ItemsInfo({
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className={classes.ItemInfoSwiper + "_thumbs"}
+        className={styles.ItemInfoSwiper + "_thumbs"}
       >
         {products.map((item, index) => (
           <SwiperSlide key={index}>
@@ -95,28 +98,28 @@ export default function ItemsInfo({
         ))}
       </Swiper>
 
-      <div className={classes.ItemsInfo__Details}>
-        <h4 className={classes.ItemsInfo__Details__Title}>Details:</h4>
+      <div className={styles.itemsInfoDetails}>
+        <h4 className={styles.itemsInfoDetailsTitle}>Details:</h4>
 
-        <div className={classes.ItemsInfo__Details_Row}>
+        <div className={styles.itemsInfoDetailsRow}>
           <span>Price:</span>
-          <ul className={classes.ItemsInfo__Details_Color}>
+          <ul className={styles.itemsInfoDetailsColor}>
             <li>{`${activeProduct.price} €`}</li>
           </ul>
         </div>
 
-        <div className={classes.ItemsInfo__Details_Row}>
+        <div className={styles.itemsInfoDetailsRow}>
           <span>Size:</span>
-          <ul className={classes.ItemsInfo__Details_Size}>
+          <ul className={styles.itemsInfoDetailsSize}>
             {activeProduct.size.map((s) => (
               <li key={s}>{s}</li>
             ))}
           </ul>
         </div>
 
-        <div className={classes.ItemsInfo__Details_Row}>
+        <div className={styles.itemsInfoDetailsRow}>
           <span>Color:</span>
-          <ul className={classes.ItemsInfo__Details_Color}>
+          <ul className={styles.itemsInfoDetailsColor}>
             <li>{activeProduct.color}</li>
           </ul>
         </div>
