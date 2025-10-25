@@ -17,7 +17,7 @@ const PriceSection = ({
 }) => {
   return (
     <div className={styles.columnSection}>
-      <label className={styles.label}>Price (min - max):</label>
+      <label className={styles.label}>Preis (min - max):</label>
       <div className={styles.section}>
         <div className={styles.priceInput}>
           <input

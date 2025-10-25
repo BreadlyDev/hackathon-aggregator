@@ -11,8 +11,6 @@
   box-sizing: border-box;
 }
 
-/* Links */
-
 a,
 a:link,
 a:visited {
@@ -22,8 +20,6 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
-
-/* Common */
 
 aside,
 nav,
@@ -63,8 +59,6 @@ svg {
 address {
   font-style: normal;
 }
-
-/* Form */
 
 input,
 textarea,
@@ -113,7 +107,6 @@ input[type="file"] {
   max-width: 100%;
 }
 
-//App Component styles
 html,
 body,
 #root {
@@ -175,5 +168,5 @@ select:focus {
 
   --font-size-medium: 18px;
 
-  --transition-duration: 0.3s;
+  --transition-duration: 0.5s;
 }

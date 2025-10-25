@@ -4,6 +4,7 @@ import styles from "./SearchPanel.module.scss";
 
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 
 import SearchSection from "./SearchSection";
 import PriceSection from "./PriceSection";
@@ -57,6 +58,16 @@ export default function SearchPanel({
           {isOpen ? <KeyboardArrowLeftIcon /> : <KeyboardArrowRightIcon />}
         </button>
 
+        <div className={styles.header}>
+          <a href="" className={styles.headerLink}>
+            <SettingsSuggestIcon
+              fontSize="inherit"
+              className={styles.headerLinkIcon}
+            />
+          </a>
+          <p className={styles.headerTitle}>Aggregator</p>
+        </div>
+
         <SearchSection
           value={searchFilter.title}
           onChange={(e) =>
@@ -78,7 +89,7 @@ export default function SearchPanel({
         />
 
         <TextSection
-          label="size"
+          label="Größe"
           placeholder="M, L"
           value={searchFilter.size}
           onChange={(e) =>
@@ -87,8 +98,8 @@ export default function SearchPanel({
         />
 
         <TextSection
-          label="color"
-          placeholder="red, blue"
+          label="Farbe"
+          placeholder="rot, blau"
           value={searchFilter.color}
           onChange={(e) =>
             setSearchFilter({ ...searchFilter, color: e.target.value })
@@ -96,8 +107,8 @@ export default function SearchPanel({
         />
 
         <GenderSection
-          label="gender"
-          placeholder="man, woman, diverse"
+          label="Geschlecht"
+          placeholder="Mann, Frau, divers"
           value={searchFilter.gender}
           onChange={(e) =>
             setSearchFilter({ ...searchFilter, gender: e.target.value })

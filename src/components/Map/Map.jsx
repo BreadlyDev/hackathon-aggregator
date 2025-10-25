@@ -119,7 +119,7 @@ export default function Map({
 
         {currentPosition && (
           <Marker position={currentPosition} icon={userIcon}>
-            <Tooltip permanent direction="bottom" offset={[0, 5]}>
+            <Tooltip direction="bottom" offset={[0, 5]}>
               You
             </Tooltip>
             <Popup>Your location</Popup>
@@ -153,13 +153,18 @@ export default function Map({
                 }}
               >
                 <Popup>
-                  <b>{shop.title}</b>
-                  <br />
-                  {branch.address}
-                  <br />
-                  💰 {shop.minPrice}€ – {shop.maxPrice}€
-                  <br />
-                  <small>Median: {shop.medianPrice}€</small>
+                  <div className={styles.popupContainer}>
+                    <b className={styles.popupTitle}>{shop.title}</b>
+                    <span className={styles.popupField}>
+                      <b>Adresse:</b> {branch.address}
+                    </span>
+                    <span className={styles.popupField}>
+                      <b>Preis:</b> {shop.minPrice}€ - {shop.maxPrice}€
+                    </span>
+                    <span className={styles.popupField}>
+                      <b>Durchschnittspreis:</b> {shop.medianPrice}€
+                    </span>
+                  </div>
                 </Popup>
               </Marker>
             );

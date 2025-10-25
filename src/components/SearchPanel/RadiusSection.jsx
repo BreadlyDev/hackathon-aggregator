@@ -9,7 +9,7 @@ const maxRadius = 200;
 const RadiusSection = ({ value, onChange }) => {
   return (
     <div className={styles.columnSection}>
-      <label className={styles.label}>Distance (radius): {value} km</label>
+      <label className={styles.label}>Distanz (Radius): {value} Km</label>
       <input
         className={`${styles.input} ${styles.range}`}
         type="range"

@@ -8,7 +8,7 @@ const SearchSection = ({ value, onChange, handleSearch, onClick }) => {
       <input
         className={styles.input}
         type="text"
-        placeholder="Search for goods"
+        placeholder="Kleidung suchen"
         value={value}
         onKeyDown={handleSearch}
         onChange={onChange}
