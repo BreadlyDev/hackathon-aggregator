@@ -11,10 +11,14 @@ import TextSection from "./TextSection";
 import GenderSection from "./GenderSection";
 import RadiusSection from "./RadiusSection";
 
-import { getGoods } from "../../api/api";
-import { mapGetGoodsRequestParams } from "../../api/helpers.js";
+import { getGoodsRequest } from "../../api/api";
 
-export default function SearchPanel({ radius, setRadius, userPosition }) {
+export default function SearchPanel({
+  radius,
+  setRadius,
+  userPosition,
+  setShopsWithBranches,
+}) {
   const [isOpen, setIsOpen] = useState(true);
   const [searchFilter, setSearchFilter] = useState({
     title: "",
@@ -26,37 +30,24 @@ export default function SearchPanel({ radius, setRadius, userPosition }) {
     shop: "",
   });
 
-  const getGoodsRequest = async () => {
-    try {
-      const data = await getGoods(
-        mapGetGoodsRequestParams(searchFilter, radius, userPosition)
-      );
-
-      const shopsWithBranches = data.map((shop) => ({
-        id: shop.id,
-        title: shop.title,
-        branches: shop.branches,
-      }));
-
-      localStorage.setItem(
-        "shopsWithBranches",
-        JSON.stringify(shopsWithBranches)
-      );
-
-      console.log("Shops with branches saved:", shopsWithBranches);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   const handleKeyDown = async (e) => {
     if (e.key === "Enter") {
-      await getGoodsRequest();
+      await getGoodsRequest(
+        searchFilter,
+        radius,
+        userPosition,
+        setShopsWithBranches
+      );
     }
   };
 
   const handleClick = async () => {
-    await getGoodsRequest();
+    await getGoodsRequest(
+      searchFilter,
+      radius,
+      userPosition,
+      setShopsWithBranches
+    );
   };
 
   return (

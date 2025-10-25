@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import {
   MapContainer,
@@ -117,25 +117,15 @@ function MapControls({ initialPosition, setCurrentPosition, theme, setTheme }) {
 
 /* =======================  ОСНОВНОЙ КОМПОНЕНТ  ======================= */
 
-export default function Map({ radius, currentPosition, setCurrentPosition }) {
+export default function Map({
+  radius,
+  currentPosition,
+  setCurrentPosition,
+  shopsWithBranches,
+}) {
   const [initialPosition, setInitialPosition] = useState(null);
   const [theme, setTheme] = useState("light");
-  const [shopsData, setShopsData] = useState([]);
 
-  // Загружаем данные магазинов
-  useEffect(() => {
-    try {
-      const storedShops = localStorage.getItem("shopsWithBranches");
-      if (storedShops) {
-        const parsed = JSON.parse(storedShops);
-        setShopsData(parsed);
-      }
-    } catch (err) {
-      console.error("Error parsing shops from localStorage:", err);
-    }
-  }, []);
-
-  // Геолокация пользователя
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -152,19 +142,22 @@ export default function Map({ radius, currentPosition, setCurrentPosition }) {
     }
   }, []);
 
-  // Автоматический зум по всем магазинам
-  const FitToShops = () => {
+  const CenterToShops = ({ shopsWithBranches }) => {
     const map = useMap();
+
     useEffect(() => {
-      if (!shopsData?.length) return;
-      const allBranches = shopsData.flatMap((s) =>
+      if (!shopsWithBranches?.length) return;
+
+      const allBranches = shopsWithBranches.flatMap((s) =>
         s.branches.map((b) => [b.latitude, b.longitude])
       );
+
       if (allBranches.length > 0) {
-        const bounds = L.latLngBounds(allBranches);
-        map.fitBounds(bounds, { padding: [50, 50] });
+        const center = L.latLngBounds(allBranches).getCenter();
+        map.setView(center); // меняем только центр, зум остаётся прежним
       }
-    }, [shopsData, map]);
+    }, [shopsWithBranches, map]);
+
     return null;
   };
 
@@ -195,7 +188,7 @@ export default function Map({ radius, currentPosition, setCurrentPosition }) {
         />
 
         <Recenter position={currentPosition} />
-        <FitToShops />
+        <CenterToShops shopsWithBranches={shopsWithBranches} />
         <MapControls
           initialPosition={initialPosition}
           currentPosition={currentPosition}
@@ -204,7 +197,6 @@ export default function Map({ radius, currentPosition, setCurrentPosition }) {
           setTheme={setTheme}
         />
 
-        {/* Радиус пользователя */}
         {radius && (
           <Circle
             center={currentPosition}
@@ -217,7 +209,6 @@ export default function Map({ radius, currentPosition, setCurrentPosition }) {
           />
         )}
 
-        {/* Маркер пользователя */}
         {currentPosition && (
           <Marker position={currentPosition} icon={homeIcon}>
             <Tooltip permanent direction="bottom" offset={[0, 5]}>
@@ -227,8 +218,7 @@ export default function Map({ radius, currentPosition, setCurrentPosition }) {
           </Marker>
         )}
 
-        {/* Маркеры магазинов */}
-        {shopsData.flatMap((shop) =>
+        {shopsWithBranches.flatMap((shop) =>
           shop.branches.map((branch, idx) => (
             <Marker
               key={`${shop.id}-${idx}`}

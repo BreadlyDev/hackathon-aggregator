@@ -7,9 +7,8 @@ import { useState } from "react";
 
 function App() {
   const [radius, setRadius] = useState(10);
-  const [currentPosition, setCurrentPosition] = useState([
-    55.751244, 37.618423,
-  ]);
+  const [currentPosition, setCurrentPosition] = useState([50.718, 12.4885]);
+  const [shopsWithBranches, setShopsWithBranches] = useState([]);
 
   return (
     <>
@@ -17,11 +16,13 @@ function App() {
         radius={radius}
         setRadius={setRadius}
         userPosition={currentPosition}
+        setShopsWithBranches={setShopsWithBranches}
       />
       <Map
         radius={radius}
         currentPosition={currentPosition}
         setCurrentPosition={setCurrentPosition}
+        shopsWithBranches={shopsWithBranches}
       />
       <ItemsInfo />
     </>
