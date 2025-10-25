@@ -85,10 +85,10 @@ function MapControls({ initialPosition, setCurrentPosition, theme, setTheme }) {
   );
 }
 
-export default function Map({ radius }) {
-  const [currentPosition, setCurrentPosition] = useState([
-    55.751244, 37.618423,
-  ]);
+export default function Map({ radius, currentPosition, setCurrentPosition }) {
+  // const [currentPosition, setCurrentPosition] = useState([
+  //   55.751244, 37.618423,
+  // ]);
   const [initialPosition, setInitialPosition] = useState(null);
   const [theme, setTheme] = useState("light");
 

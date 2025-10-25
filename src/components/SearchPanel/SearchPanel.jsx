@@ -13,7 +13,7 @@ import RadiusSection from "./RadiusSection";
 
 import { getGoods } from "../../api/api";
 
-export default function SearchPanel({ radius, setRadius }) {
+export default function SearchPanel({ radius, setRadius, userPosition }) {
   const [isOpen, setIsOpen] = useState(true);
   const [searchFilter, setSearchFilter] = useState({
     title: "",
@@ -25,30 +25,56 @@ export default function SearchPanel({ radius, setRadius }) {
     shop: "",
   });
 
-  const executeSearch = () => {
-    console.log("Search:", searchFilter.search);
-    console.log(
-      "Price:",
-      searchFilter.minPrice,
-      "€ -",
-      searchFilter.maxPrice + " €"
-    );
-    console.log("Size:", searchFilter.size);
-    console.log("Color:", searchFilter.color);
-    console.log("Gender:", searchFilter.gender);
-    console.log("Radius:", radius, "km");
+  const GENDERS = {
+    male: 1,
+    female: 0,
+    diverse: 3,
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key == "Enter") {
-      executeSearch();
-      getGoods(searchFilter);
+  const mapGetGoodsRequestParams = (searchFilter, radius, userPosition) => {
+    if (!userPosition || userPosition.length < 2) {
+      throw new Error("User position is required");
+    }
+
+    return {
+      title: searchFilter.title || undefined,
+      priceFrom: searchFilter.minPrice
+        ? Number(searchFilter.minPrice)
+        : undefined,
+      priceTo: searchFilter.maxPrice
+        ? Number(searchFilter.maxPrice)
+        : undefined,
+      size: searchFilter.size || undefined,
+      color: searchFilter.color || undefined,
+      sex: searchFilter.gender ? GENDERS[searchFilter.gender] : undefined,
+      userLat: userPosition[0],
+      userLon: userPosition[1],
+      radius: radius ?? undefined,
+    };
+  };
+
+  const handleKeyDown = async (e) => {
+    if (e.key === "Enter") {
+      try {
+        const data = await getGoods(
+          mapGetGoodsRequestParams(searchFilter, radius, userPosition)
+        );
+        console.log(data);
+      } catch (err) {
+        console.error(err);
+      }
     }
   };
 
-  const handleClick = () => {
-    executeSearch();
-    getGoods(searchFilter);
+  const handleClick = async () => {
+    try {
+      const data = await getGoods(
+        mapGetGoodsRequestParams(searchFilter, radius, userPosition)
+      );
+      console.log(data);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
