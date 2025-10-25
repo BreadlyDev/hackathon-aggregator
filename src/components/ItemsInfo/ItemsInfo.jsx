@@ -7,25 +7,20 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import classes from "./ItemsInfo.module.scss";
 
-export default function ItemsInfo() {
-  const [products, setProducts] = useState([]);
+export default function ItemsInfo({ shopWithItems }) {
+  const products = shopWithItems.items;
+  if (!products.length) {
+    return null;
+  }
+
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    fetch("/jdsports_products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((err) => console.error(err));
-  }, []);
-
-  if (!products.length) return null;
 
   const activeProduct = products[activeIndex];
 
   return (
     <div className={classes.ItemsInfo}>
-      <h2 className={classes.ItemsInfo__ShopName}>Shop Name</h2>
+      <h2 className={classes.ItemsInfo__ShopName}>{shopWithItems.shopTitle}</h2>
 
       <Swiper
         loop={true}
@@ -64,6 +59,13 @@ export default function ItemsInfo() {
 
       <div className={classes.ItemsInfo__Details}>
         <h4 className={classes.ItemsInfo__Details__Title}>Details:</h4>
+
+        <div className={classes.ItemsInfo__Details_Row}>
+          <span>Price:</span>
+          <ul className={classes.ItemsInfo__Details_Color}>
+            <li>{`${activeProduct.price} €`}</li>
+          </ul>
+        </div>
 
         <div className={classes.ItemsInfo__Details_Row}>
           <span>Size:</span>

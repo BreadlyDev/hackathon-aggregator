@@ -39,7 +39,7 @@ function App() {
         searchFilter={searchFilter}
         setShopWithItems={setShopWithItems}
       />
-      {shopWithItems ? <ItemsInfo /> : null}
+      {shopWithItems ? <ItemsInfo shopWithItems={shopWithItems} /> : null}
     </>
   );
 }
