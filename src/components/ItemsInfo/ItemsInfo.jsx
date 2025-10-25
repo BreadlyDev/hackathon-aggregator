@@ -6,15 +6,53 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import classes from "./ItemsInfo.module.scss";
+import { getShopItemsRequest } from "../../api/api";
 
-export default function ItemsInfo({ shopWithItems }) {
+export default function ItemsInfo({
+  shopWithItems,
+  setShopWithItems,
+  searchFilter,
+  radius,
+  userPosition,
+}) {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [page, setPage] = useState(0);
+
+  useEffect(() => {
+    const nearEnd = activeIndex >= products.length - 2;
+    if (nearEnd) {
+      const loadMore = async () => {
+        const nextPage = page + 1;
+        try {
+          const data = await getShopItemsRequest(
+            shopWithItems.shopId,
+            searchFilter,
+            radius,
+            userPosition,
+            nextPage
+          );
+
+          if (data.items && data.items.length > 0) {
+            setShopWithItems((prev) => ({
+              ...prev,
+              items: [...prev.items, ...data.items],
+            }));
+            setPage(nextPage);
+          }
+        } catch (e) {
+          console.error("Ошибка при подгрузке:", e);
+        }
+      };
+
+      loadMore();
+    }
+  }, [activeIndex]);
+
   const products = shopWithItems.items;
   if (!products.length) {
     return null;
   }
-
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const activeProduct = products[activeIndex];
 
