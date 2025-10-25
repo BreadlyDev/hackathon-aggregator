@@ -15,15 +15,20 @@ const userIcon = new L.DivIcon({
   iconAnchor: [15, 30],
 });
 
-const locationIconMarkup = renderToStaticMarkup(
-  <LocationOnIcon style={{ color: "#e63946", fontSize: "28px" }} />
-);
+function createLocationIcon(color) {
+  const markup = renderToStaticMarkup(
+    <LocationOnIcon style={{ color, fontSize: "28px" }} />
+  );
 
-const locationIcon = new L.DivIcon({
-  html: locationIconMarkup,
-  className: "",
-  iconSize: [28, 28],
-  iconAnchor: [14, 28],
-});
+  return new L.DivIcon({
+    html: markup,
+    className: "",
+    iconSize: [28, 28],
+    iconAnchor: [14, 28],
+  });
+}
 
-export { userIcon, locationIcon };
+export { userIcon };
+export const cheapLocationIcon = createLocationIcon("#67e639");
+export const mediumLocationIcon = createLocationIcon("#e6e339");
+export const expensiveLocationIcon = createLocationIcon("#e63946");

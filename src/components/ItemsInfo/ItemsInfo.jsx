@@ -45,7 +45,7 @@ export default function ItemsInfo({
           setPage(nextPage);
         }
       } catch (e) {
-        console.error("Ошибка при подгрузке:", e);
+        console.error("Error during loading data:", e);
       }
     };
 
@@ -60,8 +60,8 @@ export default function ItemsInfo({
   const activeProduct = products[activeIndex];
 
   return (
-    <div className={styles.itemsInfo}>
-      <h2 className={styles.itemsInfoShopName}>{shopWithItems.shopTitle}</h2>
+    <div className={styles.itemInfo}>
+      <h2 className={styles.itemInfoShopName}>{shopWithItems.shopTitle}</h2>
 
       <Swiper
         loop={true}
@@ -69,7 +69,7 @@ export default function ItemsInfo({
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className={styles.ItemInfoSwiper}
+        className={styles.itemInfoSwiper}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
         {products.map((item, index) => (
@@ -98,28 +98,28 @@ export default function ItemsInfo({
         ))}
       </Swiper>
 
-      <div className={styles.itemsInfoDetails}>
-        <h4 className={styles.itemsInfoDetailsTitle}>Details:</h4>
+      <div className={styles.itemInfoDetails}>
+        <h4 className={styles.itemInfoDetailsTitle}>Details:</h4>
 
-        <div className={styles.itemsInfoDetailsRow}>
+        <div className={styles.itemInfoDetailsRow}>
           <span>Price:</span>
-          <ul className={styles.itemsInfoDetailsColor}>
+          <ul className={styles.itemInfoDetailsPrice}>
             <li>{`${activeProduct.price} €`}</li>
           </ul>
         </div>
 
-        <div className={styles.itemsInfoDetailsRow}>
+        <div className={styles.itemInfoDetailsRow}>
           <span>Size:</span>
-          <ul className={styles.itemsInfoDetailsSize}>
+          <ul className={styles.itemInfoDetailsSize}>
             {activeProduct.size.map((s) => (
               <li key={s}>{s}</li>
             ))}
           </ul>
         </div>
 
-        <div className={styles.itemsInfoDetailsRow}>
+        <div className={styles.itemInfoDetailsRow}>
           <span>Color:</span>
-          <ul className={styles.itemsInfoDetailsColor}>
+          <ul className={styles.itemInfoDetailsColor}>
             <li>{activeProduct.color}</li>
           </ul>
         </div>

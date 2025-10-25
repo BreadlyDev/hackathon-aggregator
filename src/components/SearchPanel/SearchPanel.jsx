@@ -104,15 +104,6 @@ export default function SearchPanel({
           }
         />
 
-        <TextSection
-          label="shop"
-          placeholder="H&M, Zalando, Zara"
-          value={searchFilter.shop}
-          onChange={(e) =>
-            setSearchFilter({ ...searchFilter, shop: e.target.value })
-          }
-        />
-
         <RadiusSection
           value={radius}
           onChange={(e) => setRadius(e.target.value)}

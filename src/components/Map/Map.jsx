@@ -14,7 +14,12 @@ import "leaflet/dist/leaflet.css";
 import styles from "./Map.module.scss";
 
 import { getShopItemsRequest } from "../../api/api";
-import { userIcon, locationIcon } from "./icons.jsx";
+import {
+  userIcon,
+  cheapLocationIcon,
+  mediumLocationIcon,
+  expensiveLocationIcon,
+} from "./icons.jsx";
 import Recenter from "./Recenter";
 import MapControls from "./MapControls";
 import { mapThemes } from "./themes.js";
@@ -114,7 +119,7 @@ export default function Map({
             <Marker
               key={`${shop.id}-${idx}`}
               position={[branch.latitude, branch.longitude]}
-              icon={locationIcon}
+              icon={expensiveLocationIcon}
               eventHandlers={{
                 click: async () => {
                   console.log(shop.id);

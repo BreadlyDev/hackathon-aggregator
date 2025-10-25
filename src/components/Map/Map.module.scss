@@ -10,18 +10,16 @@
   height: 100%;
 }
 
-/* Floating controls panel */
 .mapControls {
   position: absolute;
-  bottom: 20px; /* bottom-left corner */
+  bottom: 20px;
   left: 20px;
   display: flex;
-  flex-direction: row; /* horizontal layout */
-  gap: 8px; /* spacing between buttons */
+  flex-direction: row;
+  gap: 8px;
   z-index: 1000;
 }
 
-/* Base button style */
 .mapBtn {
   background-color: rgba(255, 255, 255, 0.9);
   border: none;
@@ -43,14 +41,12 @@
   }
 }
 
-/* Zoom controls container (optional grouping) */
 .zoomControls {
   display: flex;
-  flex-direction: row; /* horizontal */
+  flex-direction: row;
   gap: 8px;
 }
 
-/* Optional: icon sizing inside buttons */
 .mapBtn svg {
   width: 20px;
   height: 20px;
