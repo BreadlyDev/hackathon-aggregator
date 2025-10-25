@@ -22,6 +22,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "leaflet/dist/leaflet.css";
 import styles from "./Map.module.scss";
 import { renderToStaticMarkup } from "react-dom/server";
+import { getShopItemsRequest } from "../../api/api";
 
 /* =======================  ИКОНКИ  ======================= */
 
@@ -122,6 +123,7 @@ export default function Map({
   currentPosition,
   setCurrentPosition,
   shopsWithBranches,
+  searchFilter,
 }) {
   const [initialPosition, setInitialPosition] = useState(null);
   const [theme, setTheme] = useState("light");
@@ -224,6 +226,18 @@ export default function Map({
               key={`${shop.id}-${idx}`}
               position={[branch.latitude, branch.longitude]}
               icon={locationIcon}
+              eventHandlers={{
+                click: async () => {
+                  console.log(shop.id);
+
+                  await getShopItemsRequest(
+                    shop.id,
+                    searchFilter,
+                    radius,
+                    currentPosition
+                  );
+                },
+              }}
             >
               <Popup>
                 <b>{shop.title}</b>

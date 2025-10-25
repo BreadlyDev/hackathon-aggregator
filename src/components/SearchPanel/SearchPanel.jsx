@@ -17,37 +17,30 @@ export default function SearchPanel({
   radius,
   setRadius,
   userPosition,
+  searchFilter, 
+  setSearchFilter, 
   setShopsWithBranches,
 }) {
   const [isOpen, setIsOpen] = useState(true);
-  const [searchFilter, setSearchFilter] = useState({
-    title: "",
-    minPrice: "",
-    maxPrice: "",
-    size: "",
-    color: "",
-    gender: "",
-    shop: "",
-  });
-
+  
   const handleKeyDown = async (e) => {
     if (e.key === "Enter") {
-      await getGoodsRequest(
+      const shopsWithBranches = await getGoodsRequest(
         searchFilter,
         radius,
-        userPosition,
-        setShopsWithBranches
+        userPosition
       );
+      setShopsWithBranches(shopsWithBranches);
     }
   };
 
   const handleClick = async () => {
-    await getGoodsRequest(
+    const shopsWithBranches = await getGoodsRequest(
       searchFilter,
       radius,
-      userPosition,
-      setShopsWithBranches
+      userPosition
     );
+    setShopsWithBranches(shopsWithBranches);
   };
 
   return (

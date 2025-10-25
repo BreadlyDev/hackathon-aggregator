@@ -55,8 +55,8 @@ const mapGetGoodsRequestParams = (searchFilter, radius, userPosition) => {
 };
 
 const mapGetShopItemsRequestParams = (
-  searchFilter,
   shopId,
+  searchFilter,
   radius,
   userPosition,
   page = 0,
@@ -88,12 +88,7 @@ const mapGetShopItemsRequestParams = (
   };
 };
 
-const getGoodsRequest = async (
-  searchFilter,
-  radius,
-  userPosition,
-  setShopsWithBranches
-) => {
+const getGoodsRequest = async (searchFilter, radius, userPosition) => {
   try {
     const data = await getGoods(
       mapGetGoodsRequestParams(searchFilter, radius, userPosition)
@@ -108,12 +103,38 @@ const getGoodsRequest = async (
       branches: shop.branches,
     }));
 
-    setShopsWithBranches(shopsWithBranches);
-
     console.log("Shops with branches saved:", shopsWithBranches);
+
+    return shopsWithBranches;
   } catch (err) {
     console.error(err);
   }
 };
 
-export { getGoodsRequest };
+const getShopItemsRequest = async (
+  shopId,
+  searchFilter,
+  radius,
+  userPosition,
+  page,
+  sizePerPage
+) => {
+  try {
+    const data = await getShopItems(
+      mapGetShopItemsRequestParams(
+        shopId,
+        searchFilter,
+        radius,
+        userPosition,
+        page,
+        sizePerPage
+      )
+    );
+
+    console.log("Response from getShopItems:", data);
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+export { getGoodsRequest, getShopItemsRequest };
